@@ -1,29 +1,24 @@
+import { useController } from 'react-hook-form';
 import InputProps from './input.type';
 
-const useInputController = ({
-  error = '',
-  label = '',
-  name = '',
-  placeholder = '',
-  onBlur = () => {},
-  onChange = () => {},
-  onClick = () => {},
-  onFocus = () => {},
-  onKeyDown = () => {},
-  value = '',
-}: InputProps) => {
+const useInputController = ({ control, label = '', name = '', placeholder = '' }: InputProps) => {
+  const {
+    field,
+    fieldState: { error },
+  } = useController({
+    name,
+    control,
+  });
+
   return {
-    error,
+    error: error?.message,
+    field,
     label,
     name,
     placeholder,
-    onBlur,
-    onChange,
-    onClick,
-    onFocus,
-    onKeyDown,
+    shouldRenderError: Boolean(error?.message),
     shouldRenderLabel: Boolean(label),
-    value,
+    value: field?.value || '',
   };
 };
 

@@ -1,4 +1,4 @@
-import CountrySelect from '../../modules/countrySelect/countrySelect.module';
+import CountrySelect from '../../modules/countrySelect/countrySelect';
 import DashboardController from './dashboard.controller';
 
 const DashboardPage = () => {

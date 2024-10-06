@@ -1,11 +1,15 @@
-import ReactProps from '../../config/types';
-import ButtonController from './button.controller';
-import './button.styled';
+import { StyledButton } from './button.styled';
+import ButtonProps from './button.type';
+import useButtonController from './button.controller';
 
-const Button: ReactProps = () => {
-  ButtonController();
+const Button: React.FC<ButtonProps> = (props) => {
+  const { fullWidth, label, onClick } = useButtonController(props);
 
-  return <>Button</>;
+  return (
+    <StyledButton $fullWidth={fullWidth} onClick={onClick}>
+      {label}
+    </StyledButton>
+  );
 };
 
 export default Button;

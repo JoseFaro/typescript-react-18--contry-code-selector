@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const StyledError = styled.div`
+  color: ${(props) => props.theme.warning};
+  display: block;
+  font-size: 15px;
+  margin-top: 10px;
+`;
+
 export const StyledInput = styled.input`
   border: 1px solid #ced4da;
   border-radius: 0.375rem;
