@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import AppRoutes from './routes';
 import Layout from './components/layout/layout';
-import theme from './theme/colors';
+import theme from './theme/theme.config';
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-import ReactProps from '../../config/reactFC.type';
+import ReactProps from '../../config/types';
 import ButtonController from './button.controller';
 import './button.styled';
 

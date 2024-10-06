@@ -1,10 +1,15 @@
-import ReactProps from '../../config/reactFC.type';
+import { StyledContainer } from './card.styled';
 import CardController from './card.controller';
+import CardProps from './card.type';
 
-const Card: ReactProps = ({ children }) => {
+const Card: CardProps = ({ children, size = 'md' }) => {
   CardController();
 
-  return <div className="card">{children}</div>;
+  return (
+    <StyledContainer className="card" size={size}>
+      {children}
+    </StyledContainer>
+  );
 };
 
 export default Card;

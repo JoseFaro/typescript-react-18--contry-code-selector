@@ -21,6 +21,13 @@ const theme = {
   black: '#212121',
   white: '#ffffff',
   gray: '#757575',
+
+  sizes: {
+    sm: '540px',
+    md: '720px',
+    lg: '960px',
+    xl: '1140px',
+  },
 };
 
 export default theme;

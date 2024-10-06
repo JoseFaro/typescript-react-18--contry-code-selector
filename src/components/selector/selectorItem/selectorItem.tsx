@@ -1,4 +1,4 @@
-import ReactProps from '../../../config/reactFC.type';
+import ReactProps from '../../../config/types';
 import SelectorItemController from './selectorItem.controller';
 import './selectorItem.scss';
 

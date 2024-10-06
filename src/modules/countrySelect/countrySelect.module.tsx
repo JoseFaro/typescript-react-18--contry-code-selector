@@ -1,13 +1,24 @@
+import { StyledInputContainer } from './countrySelect.styled';
+
 import CountrySelectController from './countrySelect.controller';
-import CountrySelectList from '../countrySelectList/countrySelectList.module';
+// import CountrySelectList from '../countrySelectList/countrySelectList.module';
+import Input from '../../components/input/input';
 
 const CountrySelect = () => {
   CountrySelectController();
 
   return (
     <div>
-      Country Select Module
-      <CountrySelectList />
+      <StyledInputContainer>
+        <div>
+          <Input />
+        </div>
+        <div>
+          <Input />
+        </div>
+      </StyledInputContainer>
+
+      {/* <CountrySelectList /> */}
     </div>
   );
 };
