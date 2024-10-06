@@ -1,5 +1,4 @@
 import CountrySelectListController from './countrySelectList.controller';
-import './countrySelectList.scss';
 
 const CountrySelectList = () => {
   CountrySelectListController();

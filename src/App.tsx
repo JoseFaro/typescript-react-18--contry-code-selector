@@ -1,12 +1,20 @@
-import './scss/styles.scss';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+
+import AppRoutes from './routes';
+import Layout from './components/layout/layout';
+import theme from './theme/colors';
 
 function App() {
   return (
     <>
-      <div className="container">
-        Hello World
-        <button className="btn btn-primary">Hello</button>
-      </div>
+      <Router>
+        <ThemeProvider theme={theme}>
+          <Layout>
+            <AppRoutes />
+          </Layout>
+        </ThemeProvider>
+      </Router>
     </>
   );
 }

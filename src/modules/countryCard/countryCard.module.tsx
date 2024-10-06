@@ -1,5 +1,4 @@
 import CountryCardController from './countryCard.controller';
-import './countryCard.scss';
 
 const CountryCard = () => {
   CountryCardController();
